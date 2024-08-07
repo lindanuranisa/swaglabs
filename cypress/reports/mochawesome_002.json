@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-08-04T16:08:59.793Z",
+    "end": "2024-08-04T16:08:59.968Z",
+    "duration": 175,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b73fa935-ecae-4d14-81fa-29b38756e573",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api-test\\json-examples.spec.js",
+      "file": "cypress\\e2e\\api-test\\json-examples.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1da184bc-a374-4247-9241-020adf1b4de1",
+          "title": "JSON Object",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Json Object Example",
+              "fullTitle": "JSON Object Json Object Example",
+              "timedOut": null,
+              "duration": 83,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const exampleObject = {\n  \"key1\": \"Linda\",\n  \"key2\": \"Herky\"\n}; //Json Object\nconst exampleArrayOfValues = [\"Reyhan\", \"Febi\", \"Abiel\"]; //Array Values\nconst exampleArrayOfObject = [{\n  \"key3\": \"Linda\"\n}, {\n  \"key4\": \"Nur\"\n}, {\n  \"key5\": \"26 yo\"\n}]; //Array Object\nconst users = {\n  \"firstName\": \"John\",\n  //Values\n  \"lastName\": \"Blogs\",\n  //Values\n  \"age\": 27,\n  \"students\": [//Array\n  {\n    \"firstName\": \"Jim\",\n    \"lastName\": \"Blogs2\"\n  }, {\n    \"firstName\": \"Sarah\",\n    \"lastName\": \"Parker\"\n  }]\n}; // To extract data from JSON object\ncy.log(exampleObject.key1); //Linda\ncy.log(exampleObject.key2); //Herky\ncy.log(exampleArrayOfValues[0]); //Reyhan\ncy.log(exampleArrayOfValues[1]); //Febi\ncy.log(exampleArrayOfValues[2]); //Abiel\ncy.log(users.lastName); //Blogs\ncy.log(users.students[0].lastName); //Blogs2\ncy.log(exampleArrayOfObject[0].key3);\ncy.log(exampleArrayOfObject[1].key4);\ncy.log(exampleArrayOfObject[2].key5);",
+              "err": {},
+              "uuid": "370a7fb1-b922-4f4d-8d8f-b66f282f355b",
+              "parentUUID": "1da184bc-a374-4247-9241-020adf1b4de1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "370a7fb1-b922-4f4d-8d8f-b66f282f355b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 83,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

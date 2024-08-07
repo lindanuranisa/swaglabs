@@ -1,0 +1,23 @@
+{
+  "name": "swaglabs_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:run": "npx cypress run --record --key 5110f557-78f0-4345-ad2c-485181ba7e78"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lindanuranisa/swaglabs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.11.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}

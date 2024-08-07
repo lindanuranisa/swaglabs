@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-08-04T16:10:29.392Z",
+    "end": "2024-08-04T16:10:39.199Z",
+    "duration": 9807,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "87e98373-acac-4a2b-8325-cb4eed76e0ee",
+      "title": "",
+      "fullFile": "cypress\\e2e\\test.spec.js",
+      "file": "cypress\\e2e\\test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "257a4de9-500b-4192-9cab-d2952bd1297d",
+          "title": "As a user, I want to log in with valid credentials so that I can access the products page.",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify login with valid credential",
+              "fullTitle": "As a user, I want to log in with valid credentials so that I can access the products page. Verify login with valid credential",
+              "timedOut": null,
+              "duration": 2901,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.url().should('include', '/www.saucedemo.com/');\ncy.get('#user-name').type(_standard_user.default.userName);\ncy.get('#password').type(_standard_user.default.password);\ncy.get('#login-button').click();\ncy.url().should('include', '/inventory.html');",
+              "err": {},
+              "uuid": "82d44198-ebe6-4bd4-b258-4449682c13f9",
+              "parentUUID": "257a4de9-500b-4192-9cab-d2952bd1297d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify login with valid credential, as locked out user",
+              "fullTitle": "As a user, I want to log in with valid credentials so that I can access the products page. Verify login with valid credential, as locked out user",
+              "timedOut": null,
+              "duration": 4786,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.url().should('include', 'https://www.saucedemo.com/');\ncy.get('#user-name1').type('locked_out_user');\ncy.get('#password1').type('secret_sauce');\ncy.get('#login-button').click(); // cy.url().should('include', 'https://www.saucedemo.com/inventory.html')",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#user-name1`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#user-name1`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/test.spec.js:35:11)",
+                "diff": null
+              },
+              "uuid": "bd63990e-1c10-4424-83a2-727777864733",
+              "parentUUID": "257a4de9-500b-4192-9cab-d2952bd1297d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify login with valid credential, as error user",
+              "fullTitle": "As a user, I want to log in with valid credentials so that I can access the products page. Verify login with valid credential, as error user",
+              "timedOut": null,
+              "duration": 1850,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.visit();\nloginPage.fillUserNameField(Cypress.env(\"errorUserName\"));\nloginPage.fillPasswordField(Cypress.env(\"password\"));\nloginPage.submit();\ncy.url().should('include', '/inventory.html');",
+              "err": {},
+              "uuid": "3fbe48f0-9d49-4d11-acec-c1f18af75733",
+              "parentUUID": "257a4de9-500b-4192-9cab-d2952bd1297d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "82d44198-ebe6-4bd4-b258-4449682c13f9",
+            "3fbe48f0-9d49-4d11-acec-c1f18af75733"
+          ],
+          "failures": [
+            "bd63990e-1c10-4424-83a2-727777864733"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9537,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
